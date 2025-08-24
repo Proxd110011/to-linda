@@ -3,12 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Para ti</title>
+  <title>Fecha y Hora</title>
   <link rel="stylesheet" href="static/css/index.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Para ti Linda</h1>
+    <h1 id="fechaHora"></h1>
   </div>
+
+  <script>
+    function actualizarFechaHora() {
+      const ahora = new Date();
+
+      const año = ahora.getFullYear();
+      const mes = String(ahora.getMonth() + 1).padStart(2, '0'); // meses inician en 0
+      const dia = String(ahora.getDate()).padStart(2, '0');
+      const hora = String(ahora.getHours()).padStart(2, '0');
+      const minuto = String(ahora.getMinutes()).padStart(2, '0');
+      const segundo = String(ahora.getSeconds()).padStart(2, '0');
+
+      const texto = `Año ${año} Mes ${mes} Día ${dia} Hora ${hora} Minuto ${minuto} Segundo ${segundo}`;
+      document.getElementById("fechaHora").textContent = texto;
+    }
+
+    // Actualiza cada segundo
+    setInterval(actualizarFechaHora, 1000);
+    actualizarFechaHora();
+  </script>
 </body>
 </html>
