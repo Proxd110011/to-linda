@@ -1,0 +1,36 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fondo */
+body {
+  background: url("../img/image.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenedor del texto */
+.container {
+  background: rgba(0, 0, 0, 0.5); /* oscurece un poco para que resalte el texto */
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Texto */
+.container h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem); /* Responsivo */
+  letter-spacing: 2px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+}
