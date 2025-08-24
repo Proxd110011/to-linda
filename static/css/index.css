@@ -21,16 +21,16 @@ body {
 
 /* Contenedor del texto */
 .container {
-  background: rgba(0, 0, 0, 0.5); /* oscurece un poco para que resalte el texto */
+  background: rgba(0, 0, 0, 0.5);
   padding: 30px 50px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Texto */
+/* Texto dinámico */
 .container h1 {
   color: #fff;
-  font-size: clamp(2rem, 5vw, 4rem); /* Responsivo */
-  letter-spacing: 2px;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  letter-spacing: 1px;
   text-shadow: 0 3px 6px rgba(0,0,0,0.7);
 }
